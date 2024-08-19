@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('LibraryImages/bigstock-A-pile-of-books.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            backdrop-filter: blur(2px);
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+        }
+        h2 {
+            text-align: center;
+            color: #482B29;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #080808;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #482B29;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #482B29;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add the Book to the Library</h2>
+        <form action="addBook" method="post">
+            <div class="form-group">
+                <label for="code">Book Code</label>
+                <input type="text" id="code" name="code" placeholder="Enter book code" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Book Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter book name" required>
+            </div>
+            <div class="form-group">
+                <label for="author">Book Author</label>
+                <input type="text" id="author" name="author" placeholder="Enter book author" required>
+            </div>
+            <div class="form-group">
+                <label for="status">Book Status</label>
+                <input type="text" id="status" name="status" placeholder="Enter book status" required>
+            </div>
+            <input type="submit" value="Add Book">
+        </form>
+    </div>
+</body>
+</html>
